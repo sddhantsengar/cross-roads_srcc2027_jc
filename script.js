@@ -109,17 +109,22 @@ function validateField(id){
   element.closest(".field").classList.toggle("invalid",!valid);
   return valid;
 }
+
 function validateAll(){
   const results=Object.keys(validators).map(validateField);
+
   const yearValid=$("#year").checked;
   $("#yearField").classList.toggle("invalid",!yearValid);
   results.push(yearValid);
+
+  const conclaveValid=!!document.querySelector('input[name="businessConclave"]:checked');
+  results.push(conclaveValid);
+
   return results.every(Boolean);
 }
+
+
 function buildPayload(){
-  const payload={
-    recruitmentType:"Junior Coordinator",
-    function buildPayload(){
   const payload={
     recruitmentType:"Junior Coordinator",
     businessConclave:document.querySelector('input[name="businessConclave"]:checked')?.value || "",
@@ -134,12 +139,15 @@ function buildPayload(){
     commitments:$("#commitments").value.trim(),
     submittedAt:new Date().toISOString()
   };
+
   order.teams.forEach((id,index)=>payload["team"+(index+1)]=LABELS[id]);
   order.core.forEach((value,index)=>payload["core"+(index+1)]=value);
   order.event.forEach((value,index)=>payload["event"+(index+1)]=value);
   order.tech.forEach((value,index)=>payload["tech"+(index+1)]=value);
+
   return payload;
 }
+
 function showSuccess(payload){
   $("#applicationForm").hidden=true;
   $("#successName").textContent=payload.fullName.split(/\s+/)[0];

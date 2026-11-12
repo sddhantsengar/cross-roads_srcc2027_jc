@@ -1,6 +1,6 @@
 /* CROSSROADS 2027 — JUNIOR COORDINATOR FORM
    Replace the URL below with your NEW Google Apps Script deployment URL. */
-const SHEET_URL = "PASTE_YOUR_NEW_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbwr5EF0mIjimZuXuKmOXdgK56S9o7l-WI7J8ZUfS0DgzoRmpz_nYej7KrdQ5qj7keFs/exec";
 
 const TEAMS = [
   {id:"core",label:"Core Team",description:"Run the backbone of the festival."},

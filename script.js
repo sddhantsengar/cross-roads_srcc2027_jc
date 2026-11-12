@@ -119,6 +119,10 @@ function validateAll(){
 function buildPayload(){
   const payload={
     recruitmentType:"Junior Coordinator",
+    function buildPayload(){
+  const payload={
+    recruitmentType:"Junior Coordinator",
+    businessConclave:document.querySelector('input[name="businessConclave"]:checked')?.value || "",
     fullName:$("#name").value.trim(),
     year:"First year",
     rollNumber:$("#roll").value.trim(),

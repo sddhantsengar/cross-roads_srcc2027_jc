@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101522">
+  <meta name="description" content="Apply to become a Junior Coordinator at Crossroads 2027, the annual cultural festival of Shri Ram College of Commerce.">
+  <title>Crossroads 2027 — Junior Coordinator Recruitment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Keep your existing banner.jpg in this folder. -->
+  <header class="hero-banner">
+    <img src="banner.jpg" alt="Crossroads 2027">
+    <div class="banner-shade"></div>
+  </header>
+
+  <main class="shell">
+    <section class="intro">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> CROSSROADS 2027 <span class="eyebrow-line"></span> RECRUITMENT OPEN</div>
+      <p class="edition">THE NEXT WAVE STARTS HERE.</p>
+      <h1>Make your <span>mark.</span></h1>
+      <p class="intro-copy">Big ideas need people who are ready to make them happen. Step into the team behind Shri Ram College of Commerce's annual cultural festival and help build an experience people remember.</p>
+      <div class="eligibility"><span class="eligibility-icon">01</span><span><b>First-year students only</b><small>Applications for Junior Coordinator positions</small></span></div>
+      <a class="text-link" href="roles.html">Explore teams &amp; responsibilities <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="about-panel">
+      <div class="section-index">01 / THE FESTIVAL</div>
+      <div>
+        <h2>More than a festival.<br><span>A whole lot of possibility.</span></h2>
+        <p>Crossroads is the annual cultural festival of Shri Ram College of Commerce, University of Delhi. It brings together talent, creativity, competition and entertainment on one platform.</p>
+        <p>As a Junior Coordinator, you'll work alongside experienced student leaders, take ownership of real responsibilities, learn how large-scale events come together and help shape Crossroads 2027.</p>
+        <div class="division-grid">
+          <article class="division-card"><span class="division-no">A</span><h3>Core Team</h3><p>Build the backbone of the festival.</p><div class="mini-tags"><span>Marketing &amp; Media</span><span>Sponsorship</span><span>Outreach</span><span>Logistics</span></div></article>
+          <article class="division-card"><span class="division-no">B</span><h3>Events Team</h3><p>Bring ideas and experiences to life.</p><div class="mini-tags"><span>Sponsorship</span><span>Outreach</span></div></article>
+          <article class="division-card"><span class="division-no">C</span><h3>Tech Team</h3><p>Create the digital and visual language.</p><div class="mini-tags"><span>Graphic Design</span><span>Video Editing</span><span>Web Development</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <div class="form-heading">
+      <div class="section-index">02 / YOUR APPLICATION</div>
+      <h2>Let's get to know you.</h2>
+      <p>Take your time. Your preferences matter, so review your answers before submitting.</p>
+    </div>
+
+    <form id="applicationForm" novalidate>
+      <section class="form-card">
+        <div class="card-heading"><span class="step">01</span><div><h3>The basics</h3><p>How can we reach you?</p></div></div>
+        <div class="field-grid">
+          <div class="field full" data-field="name"><label for="name">Full name <em>*</em></label><input id="name" name="fullName" type="text" autocomplete="name" placeholder="As per college records" required><small class="error">Please enter your first and last name.</small></div>
+          <div class="field" data-field="roll"><label for="roll">College roll number <em>*</em></label><input id="roll" name="rollNumber" type="text" placeholder="Your roll number" required><small class="error">Please enter your roll number.</small></div>
+          <div class="field" data-field="phone"><label for="phone">Mobile number <em>*</em></label><input id="phone" name="contact" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10-digit number" required><small class="error">Enter a valid 10-digit Indian mobile number.</small></div>
+          <div class="field full" data-field="email"><label for="email">College / personal email <em>*</em></label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required><small class="error">Enter a valid email address.</small></div>
+          <div class="field full" data-field="year" id="yearField">
+            <label class="confirm"><input id="year" type="checkbox" required><span><b>I confirm that I am currently a first-year student.</b><small>Only first-year students are eligible for Junior Coordinator recruitment.</small></span></label>
+            <small class="error">Please confirm your first-year eligibility to continue.</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="form-card">
+        <div class="card-heading"><span class="step">02</span><div><h3>Find your place</h3><p>Rank all three teams in order of preference. Use the arrows to rearrange them.</p></div></div>
+        <div class="rank-intro"><span class="rank-star">✳</span><span>Your first choice helps us understand where you'd most like to contribute. Your other preferences matter too.</span></div>
+        <ol class="rank-list" id="rank-domain" aria-label="Rank teams"></ol>
+        <div id="sub-rankings"></div>
+      </section>
+
+      <section class="form-card" id="workSection">
+        <div class="card-heading"><span class="step">03</span><div><h3>Show us what you make</h3><p>Share work samples if you have them.</p></div><span class="status-pill" id="workBadge">Optional</span></div>
+        <div class="notice" id="workNotice"><b>Tech in your top two?</b> Add a Google Drive folder with relevant work so the team can understand your skills. Set access to “Anyone with the link can view”.</div>
+        <div class="field" data-field="drive" id="driveField"><label for="drive">Google Drive link <span class="optional-label" id="driveOptional">Optional</span></label><input id="drive" name="driveLink" type="url" placeholder="https://drive.google.com/…"><small class="field-help">Posters, designs, edits, websites, projects — anything you're proud of.</small><small class="error" id="driveError">A valid Google Drive link is required when Tech is in your top two.</small></div>
+      </section>
+
+      <section class="form-card">
+        <div class="card-heading"><span class="step">04</span><div><h3>What makes you, you?</h3><p>Tell us what you could bring to Crossroads.</p></div></div>
+        <div class="field" data-field="contribution"><label for="contribution">Skills, experience &amp; ideas <span class="optional-label">Optional</span></label><textarea id="contribution" name="contribution" maxlength="1200" placeholder="Have you organised an event, managed a page, designed something, built a project, or got an idea you'd love to try? Tell us here."></textarea><div class="counter"><span id="contributionCount">0</span> / 1200</div></div>
+        <div class="field"><label for="commitments">Other commitments <span class="optional-label">Optional</span></label><textarea id="commitments" name="commitments" maxlength="1000" placeholder="Societies, clubs, classes, internships or other commitments that may affect your availability."></textarea><div class="counter"><span id="commitmentsCount">0</span> / 1000</div></div>
+      </section>
+
+      <div class="submit-area">
+        <div><p class="submit-kicker">READY WHEN YOU ARE</p><h2>Let's make it happen.</h2><p>Your application can't be edited after submission. Give everything one final look.</p></div>
+        <button class="submit-button" id="submitButton" type="submit"><span>Submit application</span><b aria-hidden="true">↗</b></button>
+      </div>
+      <p class="privacy-note">Your details will be used only for the Crossroads 2027 recruitment process.</p>
+      <p class="form-message" id="formMessage" role="alert" aria-live="polite"></p>
+    </form>
+
+    <section class="success-panel" id="successPanel" aria-live="polite" hidden>
+      <div class="success-mark">✓</div><p class="section-index">APPLICATION RECEIVED</p><h2>You're in the mix<span>.</span></h2><p>Thanks, <b id="successName"></b>. Your Junior Coordinator application has been recorded.</p><div class="success-details" id="successDetails"></div><a class="text-link" href="index.html">Back to Crossroads 2027 ↗</a>
+    </section>
+
+    <footer><span>CROSSROADS 2027</span><span>SHRI RAM COLLEGE OF COMMERCE · UNIVERSITY OF DELHI</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

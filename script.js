@@ -67,6 +67,7 @@ function saveDraft(){
     const fields={};
     TEXT_IDS.forEach(id=>fields[id]=$("#"+id).value);
     fields.year=$("#year").checked;
+     fields.businessConclave=document.querySelector('input[name="businessConclave"]:checked')?.value || "";
     sessionStorage.setItem(DRAFT_KEY,JSON.stringify({fields,order}));
   }catch(error){/* Storage may be unavailable; form still works. */}
 }
@@ -76,6 +77,10 @@ function loadDraft(){
     if(!draft)return;
     TEXT_IDS.forEach(id=>{if(typeof draft.fields?.[id]==="string")$("#"+id).value=draft.fields[id];});
     $("#year").checked=!!draft.fields?.year;
+     if(draft.fields?.businessConclave){
+  const option=document.querySelector(`input[name="businessConclave"][value="${draft.fields.businessConclave}"]`);
+  if(option)option.checked=true;
+}
     ["teams","core","event","tech"].forEach(key=>{
       const saved=draft.order?.[key];
       if(Array.isArray(saved)&&saved.length===order[key].length&&order[key].every(item=>saved.includes(item)))order[key]=saved;
